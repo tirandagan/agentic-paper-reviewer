@@ -8,11 +8,11 @@
     "email": "tiran@tirandagan.com",
     "url": "https://bepreparedsolutions.co"
   },
-  "homepage": "https://github.com/tirandagan/academic-paper-review",
-  "repository": "https://github.com/tirandagan/academic-paper-review",
-  "documentationUrl": "https://github.com/tirandagan/academic-paper-review/blob/main/docs/USER_GUIDE.md",
-  "supportUrl": "https://github.com/tirandagan/academic-paper-review/issues",
-  "privacyPolicyUrl": "https://github.com/tirandagan/academic-paper-review#privacy",
+  "homepage": "https://github.com/tirandagan/agentic-paper-reviewer",
+  "repository": "https://github.com/tirandagan/agentic-paper-reviewer",
+  "documentationUrl": "https://github.com/tirandagan/agentic-paper-reviewer/blob/main/docs/USER_GUIDE.md",
+  "supportUrl": "https://github.com/tirandagan/agentic-paper-reviewer/issues",
+  "privacyPolicyUrl": "https://github.com/tirandagan/agentic-paper-reviewer#privacy",
   "license": "MIT",
   "keywords": [
     "peer-review",
