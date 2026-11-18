@@ -1,0 +1,31 @@
+{
+  "name": "agentic-paper-reviewer",
+  "displayName": "Agentic Research Paper Reviewer",
+  "version": "0.1.0",
+  "description": "Detailed, grounded AI feedback on a research paper before you submit it: reads the whole PDF, searches arXiv for related work, writes an ICLR-style referee report with every point tied to the paper or a cited arXiv paper, and scores 7 dimensions into a 1-10 overall. Follows the pipeline published by paperreview.ai (Stanford Agentic Reviewer).",
+  "author": {
+    "name": "Tiran Dagan",
+    "email": "tiran@tirandagan.com",
+    "url": "https://bepreparedsolutions.co"
+  },
+  "homepage": "https://github.com/tirandagan/academic-paper-review",
+  "repository": "https://github.com/tirandagan/academic-paper-review",
+  "documentationUrl": "https://github.com/tirandagan/academic-paper-review/blob/main/docs/USER_GUIDE.md",
+  "supportUrl": "https://github.com/tirandagan/academic-paper-review/issues",
+  "privacyPolicyUrl": "https://github.com/tirandagan/academic-paper-review#privacy",
+  "license": "MIT",
+  "keywords": [
+    "peer-review",
+    "academic",
+    "research",
+    "paper-review",
+    "arxiv",
+    "iclr",
+    "neurips",
+    "manuscript",
+    "referee-report",
+    "novelty",
+    "related-work",
+    "science"
+  ]
+}

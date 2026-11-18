@@ -1,0 +1,15 @@
+{
+  "name": "tirandagan-paper-reviewer",
+  "description": "Agentic Research Paper Reviewer, a Claude Code plugin by Tiran Dagan.",
+  "owner": {
+    "name": "Tiran Dagan",
+    "email": "tiran@tirandagan.com"
+  },
+  "plugins": [
+    {
+      "name": "agentic-paper-reviewer",
+      "source": "./",
+      "description": "Detailed, grounded AI feedback on a research paper before you submit it: reads the whole PDF, searches arXiv for related work, writes an ICLR-style referee report with every point tied to the paper or a cited arXiv paper, and scores 7 dimensions into a 1-10 overall."
+    }
+  ]
+}
