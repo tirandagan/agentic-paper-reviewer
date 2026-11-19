@@ -7,5 +7,5 @@ __pycache__/
 *.pyc
 .DS_Store
 
-# Launch-video build scratch (deliverables are copied to docs/media/)
+# Launch-video build scratch (/brag output; the video itself is a GitHub attachment)
 brag-output/

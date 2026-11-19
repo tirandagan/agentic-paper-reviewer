@@ -9,13 +9,7 @@
   Detailed, grounded feedback on your research paper in one sitting instead of one review cycle.</em>
 </p>
 
-<p align="center">
-  <a href="docs/media/brag.mp4">
-    <img src="docs/media/brag.jpg" width="720" alt="25-second video: install, run a review, the grounded report, and the evidence behind it (click to play)">
-  </a>
-  <br>
-  <sub>▶ <a href="docs/media/brag.mp4">Watch the 25-second video</a>: install, review a draft, read the report, and see the evidence behind it.</sub>
-</p>
+https://github.com/user-attachments/assets/c25aebaa-cd78-4553-92c7-639c66f1c93e
 
 **[User guide](docs/USER_GUIDE.md)**: install, inputs, reading the score,
 recalibration, troubleshooting and privacy.
