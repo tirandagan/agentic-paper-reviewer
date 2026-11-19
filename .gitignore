@@ -6,3 +6,6 @@ calibration/runs/
 __pycache__/
 *.pyc
 .DS_Store
+
+# Launch-video build scratch (deliverables are copied to docs/media/)
+brag-output/
