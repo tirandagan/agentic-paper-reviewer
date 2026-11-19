@@ -48,7 +48,7 @@ coefficients, severity scheme.
 | (not described) | Optional literature cutoff (`--before`) and self-exclusion (`--exclude`) | Lets a paper be judged against the literature that existed when it was written |
 | Async job + emailed token + web viewer | Synchronous session; review written to a Markdown file plus a scores JSON | |
 | Unnamed hosted LLM | Claude in-session; parallel `related-paper-summarizer` subagents for full-text summaries | |
-| Fitted ICLR regression; score shown only for ICLR | Documented default weights + anchors + anti-inflation rules; non-ICLR venues get an "ICLR-calibrated estimate" label | See `scoring.md`, incl. recalibration procedure and the plugin's `calibration/` harness |
+| Fitted ICLR regression; score shown only for ICLR | Documented default weights + anchors + two-way calibration rules, then a 2-number rescale fitted on 14 blinded ICLR 2025 papers; non-ICLR venues get an "ICLR-calibrated estimate" label | See `scoring.md`, incl. recalibration procedure and the plugin's `calibration/` harness |
 
 ## What each cited reference contributed
 
@@ -115,8 +115,9 @@ abstract-only where noted). Lessons actually wired into the skill are marked →
     on 500 ICLR-2022 papers: balanced acc 0.65 vs human 0.66; reflection
     +2pts, one-shot +2pts, ensembling reduces variance only; inflation is
     model-dependent (decision threshold 6 for GPT-4o, 8 for Sonnet 3.5);
-    "be critical and cautious" system framing. → Anti-inflation section of
-    `scoring.md`; critical-reviewer stance.
+    "be critical and cautious" system framing. → Critical-reviewer stance;
+    the calibration section of `scoring.md` (which, measured on Claude,
+    had to guard against under-scoring too).
 14. **The AI Scientist-v2** (arXiv:2504.08066) — VLM figure/caption review
     and a code-vs-claims audit caught what text review missed (57%
     train/test overlap; experiments described but never run). → Check
@@ -137,8 +138,9 @@ abstract-only where noted). Lessons actually wired into the skill are marked →
 - arXiv grounding: novelty checking is weakest in fields that don't post
   preprints to arXiv (the original states the same).
 - English-language papers only.
-- Overall score uses uncalibrated default weights, not the original's
-  fitted regression; read it ±1.5. `scoring.md` documents how to recalibrate.
+- Overall score uses default weights plus a rescale fitted on only 14
+  papers, not the original's regression fitted on 150; read it ±1.5.
+  `scoring.md` documents how to re-fit and recalibrate.
 - Single reviewer pass, like the original. Evidence (ReviewerToo, AI
   Scientist) says an ensemble + meta-review is better; a user who wants
   that can run the skill 2–3 times and ask for a meta-review of the runs.

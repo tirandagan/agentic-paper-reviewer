@@ -27,5 +27,6 @@
     "novelty",
     "related-work",
     "science"
-  ]
+  ],
+  "icon": "./.claude-plugin/icon.png"
 }

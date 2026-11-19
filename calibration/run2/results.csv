@@ -1,0 +1,15 @@
+paper,openreview_id,title,band,human_avg,human_ratings,decision,pdf_revision,ai_overall,originality,importance,claims_supported,soundness,clarity,value,contextualization,ai_le_5_5,ai_rescaled
+paper_01,qDCkEHN3m8,Robust Spike-based Decoupled Federated Information Bottleneck Learning with Spiking Neural Network under System Heterogeneity,0,3.2,1;3;3;3;6,Withdraw,,3.3,3,5,3,3,4,3,2,1,3.29
+paper_02,AjunxrcKa2,Conditional LoRA Parameter Generation,0,3.4,1;3;3;5;5,Withdraw,,4.0,4,5,4,4,3,4,3,1,4.69
+paper_03,LRifwkqJEW,Advancing Multimodal Unified Discrete Representations,1,4.333,3;3;5;5;5;5,Withdraw,current (no revisions),4.5,4,5,5,4,4,5,4,1,5.53
+paper_04,JfRPsrP6qX,Enhancing single-cell Multi-Modal Multi-Task Learning via Sparse Mixture-of-Experts,1,3.5,1;3;5;5,Withdraw,,4.0,4,5,4,3,5,4,4,1,4.68
+paper_05,9XXBsLWMF3,PRUC & Play: Probabilistic Residual User Clustering for Recommender Systems,2,4.5,3;5;5;5,Reject,,3.9,4,5,4,3,4,4,3,1,4.33
+paper_06,AqHbMV28o7,A Unified Theory of Stochastic Proximal Point Methods without Smoothness,2,4.5,3;5;5;5,Reject,current (no revisions),4.5,4,5,5,4,5,4,5,1,5.52
+paper_07,kFoJXqiGKz,The Decrypto Benchmark for Multi-Agent Reasoning and Theory of Mind,3,6.0,5;5;8,Reject,,5.4,6,6,5,5,5,6,4,1,7.23
+paper_08,IL85Ebjg9j,Navigating Conflicting Views: Harnessing Trust for Learning,3,5.5,5;5;6;6,Reject,,4.4,4,5,5,4,5,4,4,1,5.24
+paper_09,lfPkGWXLLf,ForecastBench: A Dynamic Benchmark of AI Forecasting Capabilities,4,6.667,5;5;6;8;8;8,Poster,,6.0,6,7,6,5,6,7,5,0,8.7
+paper_10,jCDF7G3LpF,EFFICIENT JAILBREAK ATTACK SEQUENCES ON LARGE LANGUAGE MODELS VIA MULTI-ARMED BANDIT-BASED CONTEXT SWITCHING,4,6.25,5;6;6;8,Poster,,3.7,4,5,3,3,4,4,3,1,3.51
+paper_11,Iyrtb9EJBp,Measuring and Enhancing Trustworthiness of LLMs in RAG through Grounded Attributions and Learning to Refuse,5,8.0,8;8;8;8,Oral,,5.5,5,6,6,5,5,6,5,1,7.12
+paper_12,5BSlakturs,Enhancing Compositional Text-to-Image Generation with Reliable Random Seeds,5,7.333,6;8;8,Spotlight,,5.3,5,6,6,5,6,5,4,1,6.83
+paper_13,BPgK5XW1Nb,Spread Preference Annotation: Direct Preference Judgment for Efficient LLM Alignment,6,8.667,8;8;10,Oral,,5.5,5,6,6,5,6,6,4,1,7.01
+paper_14,gQlxd3Mtru,Learning stochastic dynamics from snapshots through regularized unbalanced optimal transport,6,8.667,8;8;10,Oral,,5.4,5,6,5,5,5,6,6,1,6.83

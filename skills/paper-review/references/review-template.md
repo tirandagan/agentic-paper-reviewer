@@ -58,7 +58,8 @@ structure.
 | Clarity of writing | |
 | Value to the research community | |
 | Contextualization vs. prior work | |
-| **Overall (weighted)** | **x.x / 10** |
+| Weighted sum of dimensions (raw) | x.x |
+| **Overall (ICLR scale)** | **x.x / 10** |
 
 <Verdict paragraph>
 
@@ -108,7 +109,7 @@ material — the answer would change your assessment, and (c) not already
 answered in the paper (re-check before including; asking an answered
 question is the most embarrassing reviewer failure).
 
-**Overall Assessment** — Fill the table per `scoring.md`. For a venue that is not ICLR-like, label the overall row "Overall (ICLR-calibrated estimate)" per the venue rule. The verdict
+**Overall Assessment** — Fill the table per `scoring.md`: the raw weighted sum, then the overall score after the rescale. For a venue that is not ICLR-like, label the overall row "Overall (ICLR-calibrated estimate)" per the venue rule. The verdict
 paragraph states the overall score, what primarily drove it (the 1–2
 decisive dimensions), what would most improve the paper, and — for an
 ICLR-style venue — where the score sits relative to the accept borderline

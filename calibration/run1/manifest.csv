@@ -1,0 +1,15 @@
+paper,openreview_id,title,band,human_ratings,human_avg,decision,pdf_revision
+paper_01,q1Cv7Hp52y,From Skills to Plans: Automatic Skill Discovery and Symbolic Interpretation for Compositional Tasks,0,3;3;3;3,3.0,Withdraw,current (no revisions)
+paper_02,LwAG269lIq,Data-Driven Discovery of PDEs via the Adjoint Method,0,3;3;3;3,3.0,Withdraw,current (no revisions)
+paper_03,0JcPJ0CLbx,Revisiting MAE pre-training for 3D medical image segmentation,1,3;3;3;6,3.75,Withdraw,current (no revisions)
+paper_04,FNDudoox4A,Pseudo Meets Zero: Boosting Zero-Shot Composed Image Retrieval with Synthetic Images,1,3;3;5;5,4.0,Reject,current (no revisions)
+paper_05,BipgUWZWNi,Controlling Information Leakage in Concept Bottleneck Models with Trees,2,3;5;5;5,4.5,Withdraw,current (no revisions)
+paper_06,KxjKZvyFgx,Harnessing Spatial Dependency for Domain Generalization in Multivariate Time-series Sensor Data,2,3;5;5;6,4.75,Reject,Rebuttal_Revision 2024-11-19
+paper_07,foKwWau15m,CMC-Bench: Towards a New Paradigm of Visual Signal Compression,3,5;5;6;8,6.0,Reject,Rebuttal_Revision 2024-11-26
+paper_08,q87GUkdQBm,SFESS: Score Function Estimators for $k$-Subset Sampling,3,5;5;6,5.333,Poster,Rebuttal_Revision 2024-11-21
+paper_09,ud8FtE1N4N,The Journey Matters: Average Parameter Count over Pre-training Unifies Sparse and Dense Scaling Laws,4,6;6;8,6.667,Poster,Rebuttal_Revision 2024-11-25
+paper_10,v8qABSeeKO,MMKE-Bench: A Multimodal Editing Benchmark for Diverse Visual Knowledge,4,5;6;6;8,6.25,Poster,Rebuttal_Revision 2024-11-21
+paper_11,OdnqG1fYpo,Moner: Motion Correction in Undersampled Radial MRI with Unsupervised Neural Representation,5,6;8;8;8,7.5,Spotlight,Rebuttal_Revision 2024-11-20
+paper_12,9YNyiCJE3k,OSDA Agent: Leveraging Large Language Models for De Novo Design of Organic Structure Directing Agents,5,6;8;8;8,7.5,Spotlight,Rebuttal_Revision 2024-11-20
+paper_13,YrycTjllL0,BigCodeBench: Benchmarking Code Generation with Diverse Function Calls and Complex Instructions,6,8;8;10;10,9.0,Oral,Rebuttal_Revision 2024-11-16
+paper_14,gc8QAQfXv6,Unlocking the Power of Function Vectors for Characterizing and Mitigating Catastrophic Forgetting in Continual Instruction Tuning,6,8;8;10;10,9.0,Oral,Rebuttal_Revision 2024-11-23

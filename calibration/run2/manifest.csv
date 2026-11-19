@@ -1,0 +1,15 @@
+paper,openreview_id,title,band,human_ratings,human_avg,decision,pdf_revision
+paper_01,qDCkEHN3m8,Robust Spike-based Decoupled Federated Information Bottleneck Learning with Spiking Neural Network under System Heterogeneity,0,1;3;3;3;6,3.2,Withdraw,
+paper_02,AjunxrcKa2,Conditional LoRA Parameter Generation,0,1;3;3;5;5,3.4,Withdraw,
+paper_03,LRifwkqJEW,Advancing Multimodal Unified Discrete Representations,1,3;3;5;5;5;5,4.333,Withdraw,current (no revisions)
+paper_04,JfRPsrP6qX,Enhancing single-cell Multi-Modal Multi-Task Learning via Sparse Mixture-of-Experts,1,1;3;5;5,3.5,Withdraw,
+paper_05,9XXBsLWMF3,PRUC & Play: Probabilistic Residual User Clustering for Recommender Systems,2,3;5;5;5,4.5,Reject,
+paper_06,AqHbMV28o7,A Unified Theory of Stochastic Proximal Point Methods without Smoothness,2,3;5;5;5,4.5,Reject,current (no revisions)
+paper_07,kFoJXqiGKz,The Decrypto Benchmark for Multi-Agent Reasoning and Theory of Mind,3,5;5;8,6.0,Reject,
+paper_08,IL85Ebjg9j,Navigating Conflicting Views: Harnessing Trust for Learning,3,5;5;6;6,5.5,Reject,
+paper_09,lfPkGWXLLf,ForecastBench: A Dynamic Benchmark of AI Forecasting Capabilities,4,5;5;6;8;8;8,6.667,Poster,
+paper_10,jCDF7G3LpF,EFFICIENT JAILBREAK ATTACK SEQUENCES ON LARGE LANGUAGE MODELS VIA MULTI-ARMED BANDIT-BASED CONTEXT SWITCHING,4,5;6;6;8,6.25,Poster,
+paper_11,Iyrtb9EJBp,Measuring and Enhancing Trustworthiness of LLMs in RAG through Grounded Attributions and Learning to Refuse,5,8;8;8;8,8.0,Oral,
+paper_12,5BSlakturs,Enhancing Compositional Text-to-Image Generation with Reliable Random Seeds,5,6;8;8,7.333,Spotlight,
+paper_13,BPgK5XW1Nb,Spread Preference Annotation: Direct Preference Judgment for Efficient LLM Alignment,6,8;8;10,8.667,Oral,
+paper_14,gQlxd3Mtru,Learning stochastic dynamics from snapshots through regularized unbalanced optimal transport,6,8;8;10,8.667,Oral,

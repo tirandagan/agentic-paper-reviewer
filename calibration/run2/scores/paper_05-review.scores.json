@@ -1,0 +1,24 @@
+{
+ "title": "",
+ "venue": "ICLR",
+ "literature_cutoff": "2024-10-01",
+ "dimensions": {
+  "originality": 4,
+  "importance": 5,
+  "claims_supported": 4,
+  "soundness": 3,
+  "clarity": 4,
+  "value": 4,
+  "contextualization": 3
+ },
+ "related_work_ids": [
+  "2310.19251",
+  "2109.05929",
+  "2302.02561",
+  "2404.11180"
+ ],
+ "note": "recovered from the reviewer agent's final report after the temp folder holding the original files was cleared; related_work_ids lists only the full-summary papers the report named",
+ "related_count": 12,
+ "overall_raw": 3.9,
+ "overall": 3.9
+}

@@ -28,7 +28,7 @@ Files of this skill (use these exact paths):
 - Script: `python3 ${CLAUDE_SKILL_DIR}/scripts/arxiv_search.py`
 - Fallback script: `python3 ${CLAUDE_SKILL_DIR}/scripts/pdf_to_text.py`
 - [review-template.md](${CLAUDE_SKILL_DIR}/references/review-template.md): exact output format (read before Stage 7)
-- [scoring.md](${CLAUDE_SKILL_DIR}/references/scoring.md): 7 dimensions, anchors, weights, venue rule (read before Stage 9)
+- [scoring.md](${CLAUDE_SKILL_DIR}/references/scoring.md): 7 dimensions, anchors, weights, rescale, venue rule (read before Stage 9)
 - [design-notes.md](${CLAUDE_SKILL_DIR}/references/design-notes.md): provenance and the research behind each rule (read only if the user asks why the pipeline is built this way)
 
 ## Inputs
@@ -68,7 +68,7 @@ stop and tell the user what the document appears to be instead.
 
 Fallback: if native PDF reading fails (e.g., poppler missing), extract text
 with `python3 ${CLAUDE_SKILL_DIR}/scripts/pdf_to_text.py <pdf> --out <scratch>/paper.txt`
-(requires `python3 -m pip install pypdf`) and read that. Figures are invisible
+(uses pypdf if installed, else poppler `pdftotext`) and read that. Figures are invisible
 in this mode: skip figure-level checks and state this limitation in the
 review's caveat line.
 
@@ -98,15 +98,26 @@ the paper's own terminology.
 Write each query as 2–5 key terms, most important first. Every term must
 match (the search ANDs them, dropping trailing terms if nothing comes back),
 so long sentences return little. Put multi-word technical names in double
-quotes: `"direct preference optimization" reward hacking`.
+quotes: `"direct preference optimization" reward hacking`. Spell acronyms
+out, or pair them with a domain term: an acronym alone often matches an
+unrelated field (e.g. "OSDA" is both "organic structure-directing agent"
+and "open-set domain adaptation"). If Stage 5 finds the results are from the
+wrong field, rewrite the queries.
 
 ### Stage 4: Related-work search
 
-Run all queries in one call (it rate-limits politely and de-duplicates):
+Run all queries in ONE call (it de-duplicates, and it shares a machine-wide
+limiter that keeps every arXiv request one at a time and 3 seconds apart,
+pausing everything if arXiv answers "429 too many requests"). Do not wrap it
+in your own script or split it into one call per query. It can take a few
+minutes when other reviews are searching too; let it finish.
 
 ```
 python3 ${CLAUDE_SKILL_DIR}/scripts/arxiv_search.py search -q "<query 1>" -q "<query 2>" ... --max 15 [--before <cutoff>] [--exclude <the paper's own arXiv ID>]
 ```
+
+Shell quoting: wrap each query in single quotes so phrase quotes survive,
+e.g. `-q '"masked autoencoder" 3D segmentation' -q 'sparse convolution pretraining'`.
 
 Pass `--before` whenever a literature cutoff is set. Always exclude the
 reviewed paper itself (by `--exclude` if it has an arXiv ID, otherwise by
@@ -127,14 +138,16 @@ results head-to-head; typically the 3–5 closest works). This balances
 coverage against context length, as in the original.
 
 For full-summary papers: download with
-`python3 ${CLAUDE_SKILL_DIR}/scripts/arxiv_search.py fetch <ID> [<ID> ...] --out <scratch>/related`.
+`python3 ${CLAUDE_SKILL_DIR}/scripts/arxiv_search.py fetch <ID> [<ID> ...] --out <scratch>/related [--before <cutoff>]`
+(with a cutoff it downloads each paper's v1, so later revisions cannot leak in).
 Then, if the Agent tool is available, spawn one
 `agentic-paper-reviewer:related-paper-summarizer` subagent per paper, all in
 one message so they run in parallel. Give each the PDF path, the reviewed
 paper's title and one-paragraph summary, and the salient focus areas you
 named when selecting it (e.g., "their benchmark numbers on X", "exact
-mechanism of their Y"). Without the Agent tool, read each PDF yourself and
-write the same focused summary sequentially.
+mechanism of their Y"). Each returns its summary as its reply; save each one
+to `<scratch>/related/<ID>-summary.md` yourself. Without the Agent tool, read
+each PDF yourself and write the same focused summary sequentially.
 
 ### Stage 7: Draft the review
 
@@ -177,9 +190,12 @@ critic pass in the output.
 ### Stage 9: Score
 
 Read `scoring.md`. Score the 7 dimensions with the anchors given there,
-compute the weighted overall score, apply the venue rule, and sanity-check
-against the calibration guidance (LLM reviewers systematically inflate by
-1–2 points; the median real ICLR submission sits near 5 and is rejected).
+compute the raw weighted score, and sanity-check it against the calibration
+guidance in both directions (a long weakness list is not by itself a low
+score; the median ICLR submission sits near 5, and papers whose core claims
+hold up belong at 6 or above). Then apply the fixed rescale to get the
+overall score, and apply the venue rule. Never adjust dimension scores to
+reach a target overall.
 
 ### Stage 10: Deliver
 
@@ -190,8 +206,11 @@ Write the review file (template format). Next to it, write
 {"title": "...", "venue": "ICLR", "literature_cutoff": "2024-10-01 or null",
  "dimensions": {"originality": 0, "importance": 0, "claims_supported": 0,
    "soundness": 0, "clarity": 0, "value": 0, "contextualization": 0},
- "overall": 0.0, "related_work_ids": ["2401.00001", "..."]}
+ "overall_raw": 0.0, "overall": 0.0, "related_work_ids": ["2401.00001", "..."]}
 ```
+
+`overall_raw` is the weighted sum; `overall` is the rescaled score reported in
+the review.
 
 In chat, give a short summary: the overall score, the 2–3 most important
 weaknesses, and the file path. Include the standard caveat: the review is

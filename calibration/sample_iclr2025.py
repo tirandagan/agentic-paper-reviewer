@@ -80,7 +80,10 @@ def call(path, token=None, data=None, raw=False):
                 return b if raw else json.loads(b)
         except urllib.error.HTTPError as e:
             if e.code in (429, 500, 502, 503) and attempt < 5:
-                time.sleep(30 * (attempt + 1))  # OpenReview rate limits are per minute
+                ra = e.headers.get("Retry-After") if e.headers else None
+                delay = int(ra) + 5 if ra and ra.isdigit() else 30 * (attempt + 1)
+                print("OpenReview HTTP %d; waiting %ds" % (e.code, delay), file=sys.stderr)
+                time.sleep(delay)
                 continue
             raise RuntimeError("OpenReview %s -> HTTP %s" % (path.split("?")[0], e.code))
     raise RuntimeError("OpenReview %s failed" % path)
@@ -132,6 +135,9 @@ def main():
     ap.add_argument("--paperlist", help="local copy of Paper Copilot iclr2025.json")
     ap.add_argument("--per-band", type=int, default=2)
     ap.add_argument("--seed", type=int, default=2025)
+    ap.add_argument("--exclude-manifest", action="append", default=[], metavar="CSV",
+                    help="skip papers listed in an earlier manifest.csv (repeatable), "
+                         "e.g. to validate a change on fresh papers")
     ap.add_argument("--append", action="store_true",
                     help="keep an existing manifest.csv and only fill bands that are short")
     args = ap.parse_args()
@@ -165,6 +171,8 @@ def main():
         manifest = list(csv.DictReader(open(mpath, encoding="utf-8")))
         n = max(int(m["paper"].split("_")[1]) for m in manifest)
     taken = {m["openreview_id"] for m in manifest}
+    for prior in args.exclude_manifest:
+        taken |= {m["openreview_id"] for m in csv.DictReader(open(prior, encoding="utf-8"))}
     for bi, pool in enumerate(bands):
         rng.shuffle(pool)
         got = sum(1 for m in manifest if int(m["band"]) == bi)

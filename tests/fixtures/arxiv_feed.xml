@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>ArXiv Query</title>
+  <entry>
+    <id>http://arxiv.org/abs/2410.06215v3</id>
+    <published>2024-10-08T17:20:00Z</published>
+    <title>DataEnvGym: Data Generation Agents in
+      Teacher Environments with Student Feedback</title>
+    <summary>  The process of creating training data
+      to teach models is currently driven by humans.  </summary>
+    <author><name>Zaid Khan</name></author>
+    <author><name>Mohit Bansal</name></author>
+    <category term="cs.CL"/>
+    <category term="cs.AI"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/hep-th/9901001v1</id>
+    <published>1999-01-01T00:00:00Z</published>
+    <title>An old-style identifier</title>
+    <summary>Abstract.</summary>
+    <author><name>A. Author</name></author>
+    <category term="hep-th"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/api/errors#incorrect_id_format</id>
+    <title>Error</title>
+    <summary>incorrect id format</summary>
+  </entry>
+</feed>

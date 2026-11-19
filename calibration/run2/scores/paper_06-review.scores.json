@@ -1,0 +1,4 @@
+{"title": "A Unified Theory of Stochastic Proximal Point Methods without Smoothness", "venue": "ICLR", "literature_cutoff": "2024-10-01",
+ "dimensions": {"originality": 4, "importance": 5, "claims_supported": 5,
+   "soundness": 4, "clarity": 5, "value": 4, "contextualization": 5},
+ "overall": 4.5, "related_work_ids": ["2308.09310", "2209.02257", "2405.14255", "2405.19951", "2406.01115", "1905.11261", "2111.06171", "1706.06297", "2301.03125", "2204.00406", "2407.07084"]}
