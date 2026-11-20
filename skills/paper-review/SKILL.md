@@ -1,8 +1,8 @@
 ---
 name: paper-review
 description: >-
-  Agentic academic paper reviewer modeled on paperreview.ai (the Stanford
-  Agentic Reviewer by Yixing Jiang and Andrew Ng). Produces a grounded,
+  Agentic academic paper reviewer modeled on paperreview.ai (by Yixing Jiang and Andrew Ng;
+  independent, not affiliated). Produces a grounded,
   ICLR-style referee report for a research paper (local PDF, arXiv ID or URL,
   or LaTeX/Markdown source): retrieves related work from arXiv, critiques it
   with per-claim grounding, scores 7 dimensions and combines them into a 1-10
@@ -225,8 +225,8 @@ judgment.
 - If arXiv search fails repeatedly, write the review anyway but downgrade
   confidence and say the novelty assessment is not literature-grounded.
 - The review file is the deliverable; keep chat output short.
-- The paper never leaves the machine: only search queries and arXiv IDs are
-  sent to arXiv.
+- This plugin never uploads the paper anywhere: Claude reads it in this
+  session, and only search queries and arXiv IDs are sent to arXiv.
 - This tool is for authors seeking feedback on their own work. If the user
   appears to be a conference reviewer outsourcing an assigned review, note
   that most venues prohibit this and let them decide.

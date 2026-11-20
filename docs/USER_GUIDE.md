@@ -193,7 +193,7 @@ That reproduces the original's method.
 
 ## Privacy
 
-Your paper never leaves your machine through this plugin. Claude reads it
+This plugin never uploads your paper anywhere. Claude reads it
 inside your Claude Code session, under your normal Claude data settings. The
 only network traffic the plugin adds goes to arXiv: the search queries Claude
 writes (a few technical terms each) and downloads of related arXiv papers.

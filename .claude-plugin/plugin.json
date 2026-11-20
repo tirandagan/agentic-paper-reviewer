@@ -2,11 +2,11 @@
   "name": "agentic-paper-reviewer",
   "displayName": "Agentic Research Paper Reviewer",
   "version": "0.1.0",
-  "description": "Detailed, grounded AI feedback on a research paper before you submit it: reads the whole PDF, searches arXiv for related work, writes an ICLR-style referee report with every point tied to the paper or a cited arXiv paper, and scores 7 dimensions into a 1-10 overall. Follows the pipeline published by paperreview.ai (Stanford Agentic Reviewer).",
+  "description": "Detailed, grounded AI feedback on a research paper before you submit it: reads the whole PDF, searches arXiv for related work, writes an ICLR-style referee report with every point tied to the paper or a cited arXiv paper, and scores 7 dimensions into a 1-10 overall. Follows the pipeline published by paperreview.ai (Yixing Jiang and Andrew Ng; independent, not affiliated).",
   "author": {
     "name": "Tiran Dagan",
     "email": "tiran@tirandagan.com",
-    "url": "https://bepreparedsolutions.co"
+    "url": "https://github.com/tirandagan"
   },
   "homepage": "https://github.com/tirandagan/agentic-paper-reviewer",
   "repository": "https://github.com/tirandagan/agentic-paper-reviewer",
@@ -26,7 +26,9 @@
     "referee-report",
     "novelty",
     "related-work",
-    "science"
+    "science",
+    "claude-code",
+    "openreview"
   ],
   "icon": "./.claude-plugin/icon.png"
 }

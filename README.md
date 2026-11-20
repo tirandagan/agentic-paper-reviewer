@@ -5,7 +5,7 @@
 <h1 align="center">Agentic Research Paper Reviewer</h1>
 
 <p align="center">
-  <em>A Claude Code plugin by <a href="https://bepreparedsolutions.co">Tiran Dagan</a>.
+  <em>A Claude Code plugin by <a href="https://github.com/tirandagan">Tiran Dagan</a>.
   Detailed, grounded feedback on your research paper in one sitting instead of one review cycle.</em>
 </p>
 
