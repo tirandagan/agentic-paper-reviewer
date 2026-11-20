@@ -18,7 +18,7 @@ allowed-tools: Read, Write, Glob, Grep, Agent, Bash(python3 ${CLAUDE_PLUGIN_ROOT
 # Paper Review: an agentic referee report
 
 Re-implementation of the paperreview.ai pipeline (Jiang & Ng, Stanford ML
-Group). Substitutions vs. the original: LandingAI ADE (PDF→markdown) → Claude
+Group; independent, not affiliated). Substitutions vs. the original: LandingAI ADE (PDF→markdown) → Claude
 reads the PDF natively, figures and tables included; Tavily web search → the
 free arXiv API via `arxiv_search.py`; emailed review link → a review file
 written next to the paper. The LLM stages (query generation, relevance

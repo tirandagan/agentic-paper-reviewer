@@ -4,7 +4,7 @@ This is one review from the [calibration run](REPORT.md), shown unedited, follow
 by a check of it against the paper and against the real ICLR 2025 reviews.
 
 > Written in run 1, before the score rescale. Its overall of 4.3 is the raw
-> weighted score; on the current scale that is about 5.1 (the human average
+> weighted score; on the current scale that is about 5.0 (the human average
 > was 5.33).
 
 - **Paper:** *SFESS: Score Function Estimators for k-Subset Sampling*, an ICLR 2025
